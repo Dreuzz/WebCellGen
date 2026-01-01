@@ -47,12 +47,12 @@ Install [Cygwin](https://www.cygwin.com/) or [MinGW-w64](https://www.mingw-w64.o
 
 Two versions are available:
 
-**Stable Version** (recommended):
+**Stable Version** (buggy):
 ```bash
 g++ -std=c++17 battgen.cpp -o spacer
 ```
 
-**Experimental Version** (with latest features):
+**Experimental Version** (with latest fixes):
 ```bash
 g++ -std=c++17 btest.cpp -o spacer
 ```
@@ -117,9 +117,9 @@ Edit the `USER PARAMETERS` section in the C++ scripts or use the web interface:
 battery-spacer-generator/
 ├── dev\battgen.cpp          # Stable C++ generator
 ├── dev\btest.cpp            # Experimental C++ generator
-├── index.html           # Web interface (standalone)
-├── README.md            # This file
-└── LICENSE  # License
+├── index.html               # Web interface (standalone)
+├── README.md                # This file
+└── LICENSE                  # License
 ```
 
 ## Troubleshooting
