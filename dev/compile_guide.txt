@@ -1,0 +1,10 @@
+Install g++ on your Linux Distro or cygwin/alternative on Windows
+
+g++ -std=c++17 btest.cpp -o spacer (experimental)
+g++ -std=c++17 battgen.cpp -o spacer (stable)
+
+./spacer
+
+openscad battery_spacer.scad
+
+For last command to work you need OpenScad in your system PATH.
