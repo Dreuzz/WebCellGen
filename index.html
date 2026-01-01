@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>DsSoft Battery Spacer Generator</title>
+    <title>Battery Spacer Generator</title>
     <script crossorigin src="https://unpkg.com/react@18/umd/react.production.min.js"></script>
     <script crossorigin src="https://unpkg.com/react-dom@18/umd/react-dom.production.min.js"></script>
     <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
@@ -88,7 +88,8 @@
                     for (let i = 0; i < max_gaps; i++) {
                         const ox = (params.slanted && (row & 1)) ? spacing * 0.5 : 0.0;
                         const x = i * spacing + r + params.wall + spacing * 0.5 + ox;
-                        if (x >= hole_r && x <= body_w - hole_r) {
+                        // More lenient boundary check - only exclude if way outside
+                        if (x > 0 && x < body_w) {
                             xs.push(x);
                         }
                     }
@@ -165,7 +166,7 @@
                                 <div className="flex items-center gap-3">
                                     <SettingsIcon />
                                     <div>
-                                        <h1 className="text-3xl font-bold">Ds Battery Spacer Generator</h1>
+                                        <h1 className="text-3xl font-bold">Battery Spacer Generator</h1>
                                         <p className="text-blue-100 mt-1">Configure your battery pack parameters</p>
                                     </div>
                                 </div>
